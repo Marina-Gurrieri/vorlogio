@@ -19,19 +19,19 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define('DB_NAME', 'votre_nom_de_bdd');
+define('DB_NAME', 'vorlogio');
 
 /** Utilisateur de la base de données MySQL. */
-define('DB_USER', 'votre_utilisateur_de_bdd');
+define('DB_USER', 'root');
 
 /** Mot de passe de la base de données MySQL. */
-define('DB_PASSWORD', 'votre_mdp_de_bdd');
+define('DB_PASSWORD', '');
 
 /** Adresse de l'hébergement MySQL. */
 define('DB_HOST', 'localhost');
 
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
-define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', 'utf8mb4');
 
 /** Type de collation de la base de données.
   * N'y touchez que si vous savez ce que vous faites.
@@ -49,14 +49,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY',         '@axcF#Y_*-t!|P)joH}*^%fOO|]:qLA^5z+QO}uh)IenO3feFzI)e~Lz{}Dmp!p?');
+define('SECURE_AUTH_KEY',  'E@T&.K57EY0D{n{3EiEPI[PNdtcSuJ>&be1Tgx4qZT)zB1t6ahh<l=6t>;E*b,+|');
+define('LOGGED_IN_KEY',    '_|pzqBfKG-YoG]zg:{y#f0c@M=fq1B[PBC`env:Ut>r $at+[P#$>aI`C<z2Fg]$');
+define('NONCE_KEY',        '%nHwK b+?=7(v8hunYp9<n%k3Q1Hflu-;2&fttLc[BQ]d;:oF.iCM-|OnHMdwoPO');
+define('AUTH_SALT',        '2-g^uj,&3ZT3B)F]P6H=KBzY% YGHZnv>7NapJ};cb$5e03BX7]0}m&o@AGag}gV');
+define('SECURE_AUTH_SALT', 'rWK)|~oNR%JupZnr8MNXSG,Li5GtdWi58|HIawreP=l/{ZhTX34%mN~tIp^!^h36');
+define('LOGGED_IN_SALT',   '$rQ6BVjxtG+v14cD6*jgY%w6nST6Y>}_/.$*rk@dXOEqV#>Cc*oAM<p~LFj~kPdY');
+define('NONCE_SALT',       'o@;slq5S5&B6j%SkD!xG*}W]mTJY7sjGH$Yu}AUiJGu-;#~fR$S9?Jg<,CWkPQT-');
 /**#@-*/
 
 /**
@@ -79,8 +79,8 @@ $table_prefix  = 'wp_';
  *
  * Pour plus d'information sur les autres constantes qui peuvent être utilisées
  * pour le déboguage, rendez-vous sur le Codex.
- * 
- * @link https://codex.wordpress.org/Debugging_in_WordPress 
+ *
+ * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
 
