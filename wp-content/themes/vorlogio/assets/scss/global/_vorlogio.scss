@@ -4,7 +4,7 @@ body {
     #header {
         position:relative;
         ul.nero {
-            background-color:#000000;
+            background-color:#222222;
             padding:15px 0;
             text-align:center;
             margin:0;
@@ -48,6 +48,33 @@ body {
             right:0;
             .input-group {
                 margin-bottom:0;
+                position:relative;
+                .fa {
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    line-height:40px;
+                    font-size:18px;
+                    width:40px;
+                    text-align:center;
+                    opacity:0.6;
+                    display:block !important;
+                }
+                .input-group-field {
+                    height:40px;
+                    padding:0 40px;
+                    line-height:40px;
+                    border-radius:3px;
+                    background:#f5f5f5;
+                    border:0;
+                    color:#000000;
+                    box-shadow:0 0 5px rgba(0,0,0,0.1), 0 10px 20px  rgba(0,0,0,0.15);
+                    font-size:18px;
+                    font-weight:300;
+                }
+                .input-group-button {
+                    display:none;
+                }
             }
         }
         .logo {
@@ -76,6 +103,203 @@ body {
                     }
                 }
             }
+        }
+    }
+    #footer {
+        .nero {
+            background:#222222;
+            padding:45px 0;
+            @include breakpoint(medium down) {
+                padding:25px 0;
+            }
+            .menu-footer-nav-container {
+                @include grid-column(6);
+                @include breakpoint(medium down) {
+                    @include grid-column(12);
+                }
+                #menu-footer-nav {
+                    padding:0 !important;
+                    > li {
+                        @include grid-column(6);
+                        @include breakpoint(medium down) {
+                            @include grid-column(12);
+                            padding:0 !important;
+                            margin-bottom:20px;
+                        }
+                        > a {
+                            font-size:20px;
+                            text-transform: uppercase;
+                            color:#ffffff;
+                            font-weight:bold;
+                            margin-bottom:20px;
+                            padding:0;
+                            &::after {
+                                display:block;
+                                content:"";
+                                background:$doro;
+                                height:5px;
+                                width:33.333%;
+                                margin-top:20px;
+                            }
+                        }
+                        .sub-menu {
+                            list-style:none;
+                            line-height:24px;
+                            margin:0;
+                            li {
+                                a {
+                                    color:$doro;
+                                    font-size:14px;
+                                    line-height:normal;
+                                    &:hover {
+                                        color:#ffffff;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .column {
+                margin:0;
+                list-style: none;
+                color:#ffffff;
+                @include breakpoint(medium down) {
+                    margin-bottom:20px;
+                }
+                h4 {
+                    font-size:20px;
+                    text-transform: uppercase;
+                    font-weight:bold;
+                    margin:0;
+                    margin-bottom:20px;
+                    padding:0;
+                    &::after {
+                        display:block;
+                        content:"";
+                        background:$doro;
+                        height:5px;
+                        width:33.333%;
+                        margin-top:20px;
+                    }
+                }
+                .sub-menu {
+                    list-style:none;
+                    line-height:24px;
+                    margin:0;
+                    li {
+                        a {
+                            color:#ffffff;
+                        }
+                    }
+                }
+            }
+            .reti-sociali {
+                .sub-menu {
+                    li {
+                        a {
+                            line-height:normal;
+                            display:inline-block;
+                            border-radius:50%;
+                            height:37px;
+                            width:37px;
+                            line-height:37px;
+                            text-align:center;
+                            font-size:22px;
+                            color:#ffffff;
+                            margin-right:5px;
+                            opacity:0.7;
+                            transition:transform ease 0.4s, opacity ease 0.4s;
+                            &:first-of-type {
+                                background-color:#3b5998;
+                            }
+                            &:nth-of-type(2) {
+                                background-color: #55acee;
+                            }
+                            &:last-of-type {
+                                background-color: #dc4e41;
+                            }
+                            &:hover {
+                                transform: scale(1.3);
+                                opacity:1;
+                            }
+                        }
+                    }
+                }
+            }
+            .pagamento {
+                .sub-menu {
+                    li {
+                        .fa {
+                            font-size:42px;
+                            color:#ffffff;
+                            opacity:0.8;
+                        }
+                        .column {
+                            text-align: center;
+                            margin-top:10px;
+                            @include breakpoint(medium down) {
+                                text-align: left;
+                                margin-bottom:10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .newsletter {
+                line-height:45px;
+                margin-top:25px;
+                @include breakpoint(medium down) {
+                    margin-top:0;
+                    .column {
+                        margin-bottom:0;
+                    }
+                }
+                h4 {
+                    position:relative;
+                    padding-left:25px;
+                    margin-bottom:0;
+                    line-height:45px;
+                    float:left;
+                    &::after {
+                        width:5px;
+                        height:45px;
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        margin-top:0;
+                    }
+                }
+                .email {
+                    float:left;
+                    width:auto;
+                    height:45px;
+                    border:1px solid #656565;
+                    padding:0 15px;
+                    width:320px;
+                    max-width:50%;
+                    margin-left:20px;
+                    background:transparent;
+                    margin-bottom:0;
+                }
+                .buitoni {
+                    float:left;
+                    height:45px;
+                    padding:0 20px;
+                    background:#dc4e41;
+                    color:#ffffff;
+                    text-transform: uppercase;
+                    border:0;
+                }
+            }
+        }
+        .bianco {
+            color:#222222;
+            background:#ffffff;
+            text-align: center;
+            padding:25px 0;
+            font-size:12px;
         }
     }
 }
