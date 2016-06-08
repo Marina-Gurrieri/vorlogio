@@ -95,13 +95,18 @@ body {
                 list-style: none;
                 margin-bottom: 0;
                 li {
-                display: inline-block;
+                    display: inline-block;
                     a {
                         color: $doro;
                         font-size: 15px;
                         text-transform: uppercase;
                         font-weight: 500;
                         padding: 0 20px;
+                    }
+                    &.active {
+                        a {
+                            background: transparent;
+                        }
                     }
                 }
             }
@@ -696,6 +701,111 @@ body {
                     }
                 }
             }
+        }
+    }
+    &.archive.woocommerce-page {
+        .sidebar {
+            width:25%;
+            .widget.woocommerce {
+                margin-bottom: 35px;
+                h6 {
+                    font-size: 16px;
+                    color: #41342c;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin-bottom: 16px;
+                }
+                .product-categories {
+                    background: #eee8e3;
+                    border-radius: 3px;
+                    margin: 0;
+                    list-style: none;
+                    > li {
+                        border-bottom: 1px solid #ffffff;
+                        > a {
+                            color: #a98e75;
+                            font-size: 14px;
+                            text-transform: uppercase;
+                            padding: 20px;
+                            display: block;
+                            transition: all ease 0.5s;
+                        }
+                        > ul {
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height ease 1s;
+                            background: #d9cdc2;
+                            padding: 0 20px;
+                            list-style: none;
+                            margin: 0;
+                            a {
+                                padding: 2px 0;
+                                display: block;
+                                color: #ffffff;
+                                font-weight: normal;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                            ul {
+                                list-style: none;
+                            }
+                        }
+                        &:hover {
+                            font-weight: bold;
+                            > a {
+                                color: #684835;
+                            }
+                            > ul {
+                                max-height: 1000px;
+                            }
+                        }
+                        &:last-of-type {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+                .price_slider_wrapper {
+                    .ui-slider {
+                        background-color: #6e7956;
+                        height: 10px;
+                        .ui-slider-range {
+                            background-color: #829d46;
+                        }
+                        .ui-slider-handle {
+                            height: 20px;
+                            width: 20px;
+                            background: #ffffff;
+                            border: 1px solid #829d46;
+                            border-radius: 3px;
+                            top: -5px;
+                        }
+                    }
+                    .price_label {
+                        font-size: 14px;
+                        color: #829d46;
+                    }
+                    .button {
+                        background-color: #829d46;
+                        color: #ffffff;
+                        padding: 8px 20px;
+                        transition: none;
+                        &:active {
+                            background-color: #54662b;
+                        }
+                    }
+                }
+                select {
+                    background-color: #eee8e3;
+                    border: 0;
+                    color: #684835;
+                    border-radius: 3px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .prodotto {
+            width:75%;
         }
     }
 }
