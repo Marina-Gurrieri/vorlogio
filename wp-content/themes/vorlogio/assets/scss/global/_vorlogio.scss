@@ -43,7 +43,7 @@ body {
             max-width:90%;
             width:600px;
             margin:auto;
-            top:65px;
+            top:250px;
             left:0;
             right:0;
             .input-group {
@@ -84,7 +84,7 @@ body {
                 padding:30px 0;
             }
         }
-        .menu {
+        .menu-header-container {
             padding:30px 0;
             text-align:center;
             border-top:1px solid $doro;
@@ -95,11 +95,13 @@ body {
                 list-style: none;
                 margin-bottom:0;
                 li {
+                display:inline-block;
                     a {
                         color:$doro;
                         font-size:15px;
                         text-transform: uppercase;
                         font-weight:500;
+                        padding:0 20px;
                     }
                 }
             }
@@ -282,6 +284,7 @@ body {
                     margin-left:20px;
                     background:transparent;
                     margin-bottom:0;
+                    color:#ffffff;
                 }
                 .buitoni {
                     float:left;
@@ -300,6 +303,179 @@ body {
             text-align: center;
             padding:25px 0;
             font-size:12px;
+        }
+    }
+    .benvenuto {
+        .promozione {
+            height:600px;
+            overflow:hidden;
+            position:relative;
+            img {
+                position:absolute;
+                top:0;
+            }
+            .bianco {
+                position:absolute;
+                bottom:0;
+                right:calc(100% / 12);
+                background:rgba(255,255,255,0.15);
+                padding:30px;
+                p {
+                    color:#ffffff;
+                    margin:0;
+                    line-height:30px;
+                    font-style: italic;
+                    font-weight:300;
+                    &:first-of-type {
+                        font-size:26px;
+                    }
+                    &:last-of-type {
+                        font-size:18px;
+                    }
+                }
+                a {
+                    padding:20px 75px ;
+                    margin-top:40px;
+                    display:inline-block;
+                    background:$doro;
+                    color:#ffffff;
+                    text-align: center;
+                    font-size:20px;
+                    float:right;
+                    position:relative;
+                    right:-65px;
+                    font-weight:300;
+                }
+                &::after {
+                    display:block;
+                    content:" ";
+                    clear:both;
+                }
+            }
+        }
+        h2 {
+            font-size:18px;
+            line-height:21px;
+            color:$doro;
+            border-bottom:1px solid $doro;
+            margin-top:50px;
+            margin-bottom:45px;
+            padding-bottom:25px;
+            text-align:center;
+            font-weight:600;
+            &:first-letter {
+                font-family:"Cinzel Decorative", cursive;
+                font-size:22px;
+            }
+        }
+        .nuovo, .vendita {
+            padding-bottom:50px;
+            .owl-item {
+                img {
+                    max-width:80%;
+                    margin:auto;
+                }
+                h3 {
+                    font-family:"Cinzel Decorative", cursive;
+                    color:#000000;
+                    text-align:center;
+                    font-size:16px;
+                    font-weight:bold;
+                    margin:25px 0 0;
+                    &:last-of-type {
+                        margin-top:5px;
+                    }
+                }
+            }
+            .owl-dots {
+                position:absolute;
+                top:-70px;
+                right:0;
+                transform: translateY(-100%);
+                    height:20px;
+                .owl-dot {
+                    height:20px;
+                    width:20px;
+                    background:transparent;
+                    transition: background ease 0.4s;
+                    border:1px solid #829d46;
+                    border-radius:50%;
+                    display:inline-block;
+                    margin-left:10px;
+                    &.active {
+                        background:#829d46;
+                    }
+                }
+            }
+        }
+        .notizie {
+            h2 {
+                font-size:18px;
+                line-height:21px;
+                color:#000000;
+                border-bottom:1px solid #000000;
+                margin-top:50px;
+                margin-bottom:45px;
+                padding-bottom:25px;
+                text-align:center;
+                font-weight:600;
+                &:first-letter {
+                    font-family:"Cinzel Decorative", cursive;
+                    font-size:22px;
+                }
+            }
+            article {
+                > header {
+                    max-height:185px;
+                    overflow: hidden;
+                }
+                > section {
+                    h3 {
+                        font-size:16px;
+                        font-weight:bold;
+                        color:#262a2e;
+                        margin:16px 0 10px;
+                    }
+                    h4 {
+                        color:#5a5a5a;
+                        font-size:14px;
+                        margin:10px 0;
+                        .fa {
+                            color:#829d46;
+                        }
+                    }
+                    section {
+                        font-size:16px;
+                        color:#262a2e;
+                        line-height:24px;
+                        max-height:calc(24px * 3);
+                        overflow: hidden;
+                    }
+                    a {
+                        color:#829d46;
+                        font-weight:bold;
+                        margin:20px 0;
+                        display:inline-block;
+                    }
+                }
+            }
+        }
+        .marques {
+            padding:50px 0;
+            border-top:1px solid #000000;
+            margin-top:100px;
+            .owl-item {
+                text-align: center;
+                height:100px;
+                line-height:100px;
+                img {
+                    max-width: 100px;
+                    max-height: 100px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: initial;
+                }
+            }
         }
     }
 }
