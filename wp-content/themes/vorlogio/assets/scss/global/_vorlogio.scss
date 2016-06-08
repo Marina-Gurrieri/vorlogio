@@ -8,12 +8,12 @@ body {
             padding: 15px 0;
             text-align: center;
             margin: 0;
-            list-style:  none;
+            list-style: none;
             @include breakpoint(medium down) {
                 padding: 10px 0;
             }
             li {
-                display:  inline-block;
+                display: inline-block;
                 margin: 0 10px;
                 a {
                     color: #ffffff;
@@ -24,7 +24,7 @@ body {
                         font-size: 16px;
                     }
                     &:hover {
-                        text-decoration:  underline;
+                        text-decoration: underline;
                     }
                     @include breakpoint(medium down) {
                         span {
@@ -99,7 +99,7 @@ body {
                     a {
                         color: $doro;
                         font-size: 15px;
-                        text-transform:  uppercase;
+                        text-transform: uppercase;
                         font-weight: 500;
                         padding: 0 20px;
                     }
@@ -217,7 +217,7 @@ body {
                                 background-color: #3b5998;
                             }
                             &:nth-of-type(2) {
-                                background-color:  #55acee;
+                                background-color: #55acee;
                             }
                             &:last-of-type {
                                 background-color: #dc4e41;
@@ -482,6 +482,9 @@ body {
         .immagine {
             max-height: 190px;
             overflow: hidden;
+            @include breakpoint(medium down) {
+                display: none;
+            }
             img {
                 width: 100%;
             }
@@ -491,6 +494,10 @@ body {
             border-bottom: 1px solid #e5ddd5;
             color: #829d46;
             font-size: 14px;
+            @include breakpoint(medium down) {
+                padding-left: 0.625rem;
+                padding-right: 0.625rem;
+            }
             a {
                 color: #829d46;
             }
@@ -503,6 +510,10 @@ body {
                 float: right;
                 font-size: 16px;
                 font-weight:500;
+                @include breakpoint(medium down) {
+                    display: block;
+                    float: none;
+                }
                 span {
                     margin-right:5px;
                 }
@@ -511,6 +522,9 @@ body {
         #single-post {
             > .sidebar {
                 width: 25%;
+                @include breakpoint(medium down) {
+                    display: none;
+                }
                 article {
                     margin-bottom:50px;
                     h6 {
@@ -585,6 +599,9 @@ body {
             }
             > article {
                 width: 75%;
+                @include breakpoint(medium down) {
+                    width: 100%;
+                }
                 header {
                     margin-bottom: 35px;
                     h1 {
@@ -601,6 +618,10 @@ body {
                     }
                     .reti-sociali {
                         float: right;
+                        @include breakpoint(medium down) {
+                            display: block;
+                            float: none;
+                        }
                         a {
                             line-height: normal;
                             display: inline-block;
@@ -617,7 +638,7 @@ body {
                                 background-color: #3b5998;
                             }
                             &:nth-of-type(2) {
-                                background-color:  #55acee;
+                                background-color: #55acee;
                             }
                             &:last-of-type {
                                 background-color: #dc4e41;

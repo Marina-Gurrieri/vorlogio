@@ -1,6 +1,3 @@
-$('.buitoni-ricerca').click(function(){
-    $('.ricerca').fadeToggle();
-});
 $('.owl-nuovo').owlCarousel({
 	loop:false,
 	nav:false,
@@ -54,4 +51,7 @@ $('.owl-marques').owlCarousel({
 			items:6
 		}
 	}
+});
+$('.buitoni-ricerca').click(function(){
+    $('.ricerca').fadeToggle();
 });
