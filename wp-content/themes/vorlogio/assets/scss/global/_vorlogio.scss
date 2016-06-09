@@ -310,6 +310,52 @@ body {
             font-size: 12px;
         }
     }
+    .percorsofile {
+        padding: 30px 0;
+        border-bottom: 1px solid #e5ddd5;
+        color: #829d46;
+        font-size: 14px;
+        @include breakpoint(medium down) {
+            padding-left: 0.625rem;
+            padding-right: 0.625rem;
+        }
+        a {
+            color: #829d46;
+        }
+        .active {
+            color: #684835;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .back {
+            float: right;
+            font-size: 16px;
+            font-weight:500;
+            @include breakpoint(medium down) {
+                display: block;
+                float: none;
+            }
+            span {
+                margin-right: 5px;
+            }
+        }
+        .woocommerce-breadcrumb {
+            display:inline-block;
+            margin:0;
+            text-transform: uppercase;
+            font-weight:bold;
+            color:#684835;
+            font-size: 14px;
+            span {
+                font-weight:normal;
+            }
+            a {
+                font-weight:normal;
+                text-transform: capitalize;
+                color: #829d46;
+            }
+        }
+    }
     .benvenuto {
         .promozione {
             height: 600px;
@@ -494,36 +540,6 @@ body {
                 width: 100%;
             }
         }
-        .percorsofile {
-            padding: 30px 0;
-            border-bottom: 1px solid #e5ddd5;
-            color: #829d46;
-            font-size: 14px;
-            @include breakpoint(medium down) {
-                padding-left: 0.625rem;
-                padding-right: 0.625rem;
-            }
-            a {
-                color: #829d46;
-            }
-            .active {
-                color: #684835;
-                text-transform: uppercase;
-                font-weight: bold;
-            }
-            .back {
-                float: right;
-                font-size: 16px;
-                font-weight:500;
-                @include breakpoint(medium down) {
-                    display: block;
-                    float: none;
-                }
-                span {
-                    margin-right:5px;
-                }
-            }
-        }
         #single-post {
             > .sidebar {
                 width: 25%;
@@ -706,6 +722,7 @@ body {
     &.archive.woocommerce-page {
         .sidebar {
             width:25%;
+            margin-top: 70px;
             .widget.woocommerce {
                 margin-bottom: 35px;
                 h6 {
@@ -805,7 +822,76 @@ body {
             }
         }
         .prodotto {
-            width:75%;
+            position: relative;
+            margin-top: 70px;
+            width: 75%;
+            .page-title {
+                display: none;
+            }
+            .woocommerce-result-count {
+                display: none;
+            }
+            .woocommerce-ordering {
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translateY(-100%);
+            }
+            ul.products {
+                li.product {
+                    float: left;
+                    padding: 0;
+                    position: relative;
+                    width: 33.33333%;
+                    margin: 0;
+                    margin-bottom: 70px;
+                    clear: initial;
+                    text-align: center;
+                    h3 {
+                        font-family: "Cinzel Decorative", cursive;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #000000;
+                    }
+                    .price  {
+                        font-family: "Cinzel Decorative", cursive;
+                        color: #000000;
+                        font-size: 20px;
+                    }
+                    .button {
+                        display: none;
+                    }
+                }
+            }
+            .woocommerce-pagination {
+                margin-bottom: 80px;
+                ul  {
+                    border: 0;
+                    li {
+                        border: 0;
+                        font-size: 16px;
+                        float: none;
+                        vertical-align: middle;
+                        span, a {
+                            padding:0;
+                        }
+                        span {
+                            background: transparent;
+                            &.current {
+                                color: #829d46;
+                                font-size: 20px;
+                                font-weight: bold;
+                            }
+                        }
+                        a {
+                            color: #222222;
+                            &:hover, &:focus {
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
