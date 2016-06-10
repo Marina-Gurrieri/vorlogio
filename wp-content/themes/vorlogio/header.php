@@ -32,6 +32,5 @@
 		</div>
 		<?php wp_nav_menu( array( 'theme_location' => 'top-bar-r' ) ); ?>
 	</header>
-
 	<section class="container">
 		<?php do_action( 'foundationpress_after_header' );

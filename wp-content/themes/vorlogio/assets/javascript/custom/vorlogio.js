@@ -55,3 +55,6 @@ $('.owl-marques').owlCarousel({
 $('.buitoni-ricerca').click(function(){
     $('.ricerca').fadeToggle();
 });
+$('.ricerca-avanzata').click(function(){
+	event.preventDefault();
+})

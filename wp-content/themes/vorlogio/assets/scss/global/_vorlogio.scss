@@ -111,6 +111,16 @@ body {
                 }
             }
         }
+        #ricerca-avanzata {
+            position: absolute;
+            width: 50%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1000;
+            background: #ffffff;
+            display: none;
+        }
     }
     #footer {
         .nero {
@@ -719,7 +729,7 @@ body {
             }
         }
     }
-    &.archive.woocommerce-page {
+    &.archive.woocommerce-page, &.page-template-nouveaux-produits {
         .sidebar {
             width:25%;
             margin-top: 70px;
