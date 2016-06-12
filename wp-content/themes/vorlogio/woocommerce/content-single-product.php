@@ -50,19 +50,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="summary entry-summary">
 
 		<?php
-			/**
-			 * woocommerce_single_product_summary hook.
-			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 */
-			do_action( 'woocommerce_single_product_summary' );
+		/**
+		* woocommerce_single_product_summary hook.
+		*
+		* @hooked woocommerce_template_single_title - 5
+		* @hooked woocommerce_template_single_rating - 10
+		* @hooked woocommerce_template_single_price - 10
+		* @hooked woocommerce_template_single_excerpt - 20
+		* @hooked woocommerce_template_single_add_to_cart - 30
+		* @hooked woocommerce_template_single_meta - 40
+		* @hooked woocommerce_template_single_sharing - 50
+		*/
+
+		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
+
+		add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 5 );
+		add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 10 );
+		add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+		add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+
+		do_action( 'woocommerce_single_product_summary' );
+
 		?>
+
+		<div class="row sociali">
+			<div class="medium-6 column text-left">
+				<a onclick="$(this).children().toggleClass('fa-heart-o fa-heart')"><i class="fa fa-heart-o" aria-hidden="true"></i> Ajouter à ma liste d'envie(s)</a>
+			</div>
+			<div class="medium-6 column text-right">
+				Partager cette page :
+				<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+			</div>
+		</div>
 
 	</div><!-- .summary -->
 

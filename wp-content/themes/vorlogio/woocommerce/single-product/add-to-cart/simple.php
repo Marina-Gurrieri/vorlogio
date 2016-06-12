@@ -56,6 +56,8 @@ if ( ! $product->is_purchasable() ) {
 
 	 	<button type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
+		<div class="pdf button">Télécharger le PDF</div>
+		
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>
 
