@@ -249,7 +249,7 @@ body {
                 .sub-menu {
                     li {
                         .fa {
-                            font-size: 42px;
+                            font-size: 30px;
                             color: #ffffff;
                             opacity: 0.8;
                         }
@@ -371,6 +371,9 @@ body {
             height: 600px;
             overflow: hidden;
             position: relative;
+            @include breakpoint(medium down) {
+                display:none;
+            }
             img {
                 position: absolute;
                 top: 0;
@@ -431,6 +434,9 @@ body {
         }
         .nuovo, .vendita {
             padding-bottom: 50px;
+            @include breakpoint(medium down) {
+                padding-bottom: 20px;
+            }
             .owl-item {
                 img {
                     max-width: 80%;
@@ -453,7 +459,13 @@ body {
                 top: -70px;
                 right: 0;
                 transform: translateY(-100%);
-                    height: 20px;
+                height: 20px;
+                @include breakpoint(medium down) {
+                    position: static;
+                    transform: none;
+                    text-align: center;
+                    margin-top: 15px;
+                }
                 .owl-dot {
                     height: 20px;
                     width: 20px;
@@ -465,6 +477,13 @@ body {
                     margin-left: 10px;
                     &.active {
                         background: #829d46;
+                    }
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+                    @include breakpoint(medium down) {
+                        height: 10px;
+                        width: 10px;
                     }
                 }
             }
@@ -525,6 +544,9 @@ body {
             padding: 50px 0;
             border-top: 1px solid #000000;
             margin-top: 100px;
+            @include breakpoint(medium down) {
+                margin-top: 50px;
+            }
             .owl-item {
                 text-align: center;
                 height: 100px;
@@ -541,13 +563,17 @@ body {
     }
     &.single-post {
         .immagine {
-            max-height: 190px;
+            height: 190px;
             overflow: hidden;
+            position: relative;
             @include breakpoint(medium down) {
                 display: none;
             }
             img {
                 width: 100%;
+                transform: translateY(-50%);
+                position: absolute;
+                top: 50%;
             }
         }
         #single-post {
@@ -733,6 +759,9 @@ body {
         .sidebar {
             width:25%;
             margin-top: 70px;
+            @include breakpoint(medium down) {
+                display: none;
+            }
             .widget.woocommerce {
                 margin-bottom: 35px;
                 h6 {
@@ -835,6 +864,9 @@ body {
             position: relative;
             margin-top: 70px;
             width: 75%;
+            @include breakpoint(medium down) {
+                width: 100%;
+            }
             .page-title {
                 display: none;
             }
@@ -857,11 +889,23 @@ body {
                     margin-bottom: 70px;
                     clear: initial;
                     text-align: center;
+                    @include breakpoint(medium down) {
+                        width: 50%;
+                    }
                     h3 {
                         font-family: "Cinzel Decorative", cursive;
                         font-size: 16px;
                         font-weight: bold;
                         color: #000000;
+                        @include breakpoint(medium down) {
+                            line-height: 50px;
+                            height: 16px;
+                            box-sizing: content-box;
+                            overflow: hidden;
+                            &::first-line {
+                                line-height: 16px;
+                            }
+                        }
                     }
                     .price  {
                         font-family: "Cinzel Decorative", cursive;
@@ -883,7 +927,7 @@ body {
                         float: none;
                         vertical-align: middle;
                         span, a {
-                            padding:0;
+                            padding: 0;
                         }
                         span {
                             background: transparent;
