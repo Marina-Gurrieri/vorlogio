@@ -4,7 +4,7 @@ Template Name: Contact
 */
 get_header(); ?>
 
-<div class="row">
+<div class="row inizio">
 	<div class="small-12 column">
 		<a class="back" href="<?php bloginfo('url') ?> "><i class="fa fa-undo" aria-hidden="true"></i> Retour accueil</a>
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -19,10 +19,17 @@ get_header(); ?>
 </div>
 
 <div class="row">
-	<div class="small-3 column text-center">
+	<aside class="large-3 column text-center">
+		<a class="logo" href="<?php bloginfo(url) ?>"><img src="<?php bloginfo('template_directory')  ?>/assets/vorlogio/logo.png" alt="<?php bloginfo('name') ?>" /></a>
 		<?php the_field('indirizzo'); ?>
-	</div>
-	<div class="small-8 small-offset-1 column" role="main">
+		<div class="sociali">
+			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+		</div>
+	</aside>
+	<div class="large-8 small-offset-1 column form" role="main">
+		<h3>Formulaire de contact</h3>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php the_content(); ?>
 		<?php endwhile;?>

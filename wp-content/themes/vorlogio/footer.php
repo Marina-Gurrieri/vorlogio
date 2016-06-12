@@ -64,9 +64,7 @@
 			</div>
 		</footer>
 
-
 <script src="<?php bloginfo('template_directory') ?>/assets/components/owl.carousel/dist/owl.carousel.min.js" type="text/javascript"></script>
-<script src="<?php bloginfo('template_directory') ?>/assets/javascript/custom/vorlogio.js" type="text/javascript"></script>
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
 </body>

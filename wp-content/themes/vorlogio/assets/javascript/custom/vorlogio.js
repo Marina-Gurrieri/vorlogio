@@ -36,10 +36,6 @@ $('.owl-nuovo').owlCarousel({
 });
 $('.owl-marques').owlCarousel({
 	loop:true,
-	// nav:false,
-    // autoplay: true,
-    // autoplayHoverPause: true,
-    // autoplayTimeout: 2000,
 	responsive:{
 		0:{
 			items:2
@@ -52,9 +48,9 @@ $('.owl-marques').owlCarousel({
 		}
 	}
 });
-$('.buitoni-ricerca').click(function(){
-    $('.ricerca').fadeToggle();
+
+$(document).ready(function(){
+	$('.buitoni-ricerca').on( "click", function() {
+		$('.ricerca').fadeToggle();
+	});
 });
-$('.ricerca-avanzata').click(function(){
-	event.preventDefault();
-})
